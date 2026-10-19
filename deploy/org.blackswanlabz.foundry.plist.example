@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>Label</key><string>org.blackswanlabz.foundry</string>
+<key>ProgramArguments</key><array><string>/ABSOLUTE/PYTHON</string><string>-m</string><string>foundry.server</string><string>--root</string><string>/PRIVATE/STATE</string><string>--config</string><string>/PRIVATE/operator.json</string></array>
+<key>WorkingDirectory</key><string>/ABSOLUTE/FOUNDRY</string>
+<key>RunAtLoad</key><true/><key>KeepAlive</key><true/>
+<key>StandardOutPath</key><string>/PRIVATE/STATE/service.log</string>
+<key>StandardErrorPath</key><string>/PRIVATE/STATE/error.log</string>
+<key>Umask</key><integer>63</integer>
+</dict></plist>

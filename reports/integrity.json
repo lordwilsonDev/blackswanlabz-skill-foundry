@@ -1,0 +1,9 @@
+{
+  "valid": true,
+  "errors": [],
+  "spine": {
+    "valid": true,
+    "record_count": 84
+  },
+  "authenticity": "local hash integrity; external anchoring required"
+}

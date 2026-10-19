@@ -1,0 +1,17 @@
+{
+  "authenticated_library": true,
+  "source_selection_and_assembly": true,
+  "sandbox_result": "PASS",
+  "sandbox_backend": "macos-seatbelt",
+  "experts": [
+    "provenance:PASS",
+    "scope:PASS",
+    "safety:PASS",
+    "coverage:PASS"
+  ],
+  "teaching_result": "PRACTICE",
+  "teaching_basis": "learner self-report, not verified mastery",
+  "horizontal_overflow": false,
+  "screenshot_verified": false,
+  "limitation": "Screenshot capture timed out; pointer interception on final click required DOM button activation."
+}

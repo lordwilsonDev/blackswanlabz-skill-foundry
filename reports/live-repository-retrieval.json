@@ -1,0 +1,32 @@
+[
+  {
+    "grant": {
+      "kind": "github",
+      "repo": "lordwilsonDev/ail-moie-white-papers",
+      "commit": "03722d4dce78609d93ce313d7f210d21f2d86dd5",
+      "path": "papers/ail-operational-execution/README.md"
+    },
+    "status": "PASS",
+    "source": {
+      "id": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+      "sha": "55c7da5b147dc36ad4d81695c94d5f14373b7e37ab3e9fc418e99fcd9053fc6d",
+      "origin": "operator-import",
+      "authenticity": "not independently authenticated"
+    }
+  },
+  {
+    "grant": {
+      "kind": "github",
+      "repo": "lordwilsonDev/ail-moie-white-papers",
+      "commit": "03722d4dce78609d93ce313d7f210d21f2d86dd5",
+      "path": "papers/inversion-challenge/README.md"
+    },
+    "status": "PASS",
+    "source": {
+      "id": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+      "sha": "3d487eef44ed6f531df2c8c579a98b5df7bd95846214eee31ec7444e94ae1404",
+      "origin": "operator-import",
+      "authenticity": "not independently authenticated"
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "evidence_integrity": true,
+    "sandbox_execution": true
+  },
+  "local_ready": true,
+  "production_ready": false,
+  "blockers": [
+    "independent domain acceptance review and held-out model evals not supplied",
+    "live model generation has not been demonstrated",
+    "multi-user identity/tenant isolation and remote TLS deployment not implemented",
+    "external receipt anchoring and off-host backup/restore exercise not demonstrated",
+    "Linux container build and image vulnerability scan not executed on this host",
+    "sustained-load/SLO and alert-delivery tests not demonstrated"
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "id": "0daaf6e5cda64770aab40a7d9ca73800",
+  "fingerprint": "6bac7012036057857db8b7aec0ba1293fdceff960b910c6badc2db9f06a07742",
+  "name": "AIL second-brain",
+  "version": 1,
+  "package": {
+    "capabilities": [
+      "read-selected-sources",
+      "render-grounded-workbook"
+    ],
+    "coverage": "extractive workbook from selected, revision-pinned documents; no factual adjudication",
+    "experts": [
+      "provenance",
+      "scope",
+      "safety",
+      "coverage"
+    ],
+    "extractor": "structured-lines-v1",
+    "forbidden": [
+      "shell",
+      "network",
+      "filesystem-write",
+      "external-actions"
+    ],
+    "mode": "second-brain",
+    "name": "AIL second-brain",
+    "question": {
+      "authority": {
+        "source": "local-operator-demo",
+        "status": "VALID"
+      },
+      "consumer": {
+        "id": "foundry-demo"
+      },
+      "proposition": "Identify, invert and test assumptions using repository evidence",
+      "purpose": "Reproducible source-grounded second-brain",
+      "question_id": "Q-DEMO-second-brain",
+      "referent": "AIL second-brain",
+      "scope": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf,a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+      "speech_act": "QUESTION",
+      "status": "PROPOSED",
+      "temporal_validity": {
+        "effective": "2026-10-18T00:00:00Z",
+        "expires": null
+      },
+      "universe": [
+        "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa"
+      ],
+      "version": 1
+    },
+    "question_assessment": {
+      "blockers": [],
+      "checks": [
+        {
+          "check_id": "Q-ID-001",
+          "evidence": {
+            "question_id": "Q-DEMO-second-brain"
+          },
+          "message": "question_id format Q-...",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-ID-002",
+          "evidence": {
+            "version": 1
+          },
+          "message": "version >= 1",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-SA-001",
+          "evidence": {
+            "speech_act": "QUESTION"
+          },
+          "message": "speech act recognized",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-REF-001",
+          "evidence": {},
+          "message": "referent non-empty",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-PROP-001",
+          "evidence": {},
+          "message": "proposition non-empty",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-SCOPE-001",
+          "evidence": {},
+          "message": "scope non-empty",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-UNIV-001",
+          "evidence": {
+            "universe": [
+              "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa"
+            ]
+          },
+          "message": "universe declared",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-AUTH-001",
+          "evidence": {},
+          "message": "authority source present",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-CONS-001",
+          "evidence": {},
+          "message": "consumer identity present",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-PURP-001",
+          "evidence": {},
+          "message": "purpose non-empty",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-STATUS-001",
+          "evidence": {
+            "status": "PROPOSED"
+          },
+          "message": "status recognized",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-TIME-001",
+          "evidence": {
+            "effective": "2026-10-18T00:00:00Z"
+          },
+          "message": "temporal_validity.effective is a valid ISO timestamp",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-TIME-002",
+          "evidence": {
+            "expires": null
+          },
+          "message": "temporal_validity.expires is null or a valid ISO timestamp",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-ABS-001",
+          "evidence": {
+            "absence_phrasing": false,
+            "uncovered": []
+          },
+          "message": "absence proposition requires scope covering the whole declared universe",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-AUTH-002",
+          "evidence": {
+            "authority_status": "VALID"
+          },
+          "message": "authority status is VALID/ACTIVE",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-TIME-003",
+          "evidence": {},
+          "message": "within temporal validity",
+          "status": "PASS"
+        },
+        {
+          "check_id": "Q-STATUS-002",
+          "evidence": {
+            "status": "PROPOSED"
+          },
+          "message": "status permits consumption",
+          "status": "PASS"
+        }
+      ],
+      "consumable": true,
+      "identity_hash": "ce6ddb086333d71df07030056be63d5b832f055843746ee0a429472cc444c969",
+      "verdict": "PASS",
+      "well_formed": true
+    },
+    "schema": 1,
+    "sources": [
+      {
+        "id": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "locator": "github:lordwilsonDev/ail-moie-white-papers/papers/ail-operational-execution/README.md",
+        "revision": "03722d4dce78609d93ce313d7f210d21f2d86dd5",
+        "sha": "55c7da5b147dc36ad4d81695c94d5f14373b7e37ab3e9fc418e99fcd9053fc6d",
+        "title": "papers/ail-operational-execution/README.md"
+      },
+      {
+        "id": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "locator": "github:lordwilsonDev/ail-moie-white-papers/papers/inversion-challenge/README.md",
+        "revision": "03722d4dce78609d93ce313d7f210d21f2d86dd5",
+        "sha": "3d487eef44ed6f531df2c8c579a98b5df7bd95846214eee31ec7444e94ae1404",
+        "title": "papers/inversion-challenge/README.md"
+      }
+    ],
+    "steps": [
+      {
+        "line": 13,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "# AIL Operational Execution: Axiom Inversion Logic v0.1.0"
+      },
+      {
+        "line": 15,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "## Abstract"
+      },
+      {
+        "line": 19,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "## README"
+      },
+      {
+        "line": 33,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "## SPEC"
+      },
+      {
+        "line": 35,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "### Stage 1 \u2014 Identify"
+      },
+      {
+        "line": 36,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- Input: raw claim"
+      },
+      {
+        "line": 37,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- Output: `mission.json` (claim, domain tags, mode, operator count)"
+      },
+      {
+        "line": 38,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- Gate: delta threshold 0.4"
+      },
+      {
+        "line": 40,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "### Stage 2 \u2014 Invert"
+      },
+      {
+        "line": 41,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- Invert each axiom via adversarial crew (Builder/Destroyer/Skeptic/Alternative Architect/Verifier/Unknown Hunter)"
+      },
+      {
+        "line": 42,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- Output: inverted claim set"
+      },
+      {
+        "line": 44,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "### Stage 3 \u2014 Re-Derive"
+      },
+      {
+        "line": 45,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- Re-derive original claim from inverted claim set"
+      },
+      {
+        "line": 46,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- Output: reconstructed claim + delta score"
+      },
+      {
+        "line": 48,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "### Stage 4 \u2014 Compare"
+      },
+      {
+        "line": 49,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- delta = 1.0 - similarity(original, reconstructed)"
+      },
+      {
+        "line": 50,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- delta >= 0.7 \u2192 HIGH falsifiability"
+      },
+      {
+        "line": 51,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- 0.4 <= delta < 0.7 \u2192 MEDIUM falsifiability"
+      },
+      {
+        "line": 52,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- delta < 0.4 \u2192 LOW falsifiability, RECYCLE"
+      },
+      {
+        "line": 54,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "### Stage 5 \u2014 Synthesize"
+      },
+      {
+        "line": 55,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- Emit final verdict: SUPPORTED / REFUTED / INCONCLUSIVE"
+      },
+      {
+        "line": 56,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- Append to `ail_runs.db` with SHA-256 dedup key"
+      },
+      {
+        "line": 58,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "### MoIE Routing"
+      },
+      {
+        "line": 59,
+        "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+        "text": "- Mode A: <60s, single operator"
+      },
+      {
+        "line": 13,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "# Inversion Challenge: AIL Adversarial Crew + Inversion Execution v0.1.0"
+      },
+      {
+        "line": 15,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "## Abstract"
+      },
+      {
+        "line": 19,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "## README"
+      },
+      {
+        "line": 33,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "## SPEC"
+      },
+      {
+        "line": 35,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "### Six-Role Adversarial Crew"
+      },
+      {
+        "line": 46,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "### Inversion Process"
+      },
+      {
+        "line": 47,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "1. Builder writes canonical claim"
+      },
+      {
+        "line": 48,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "2. Destroyer inverts each premise"
+      },
+      {
+        "line": 49,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "3. Skeptic flags untested assumptions"
+      },
+      {
+        "line": 50,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "4. Alternative Architect proposes inversions"
+      },
+      {
+        "line": 51,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "5. Verifier checks logical consistency"
+      },
+      {
+        "line": 52,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "6. Unknown Hunter lists hidden premises"
+      },
+      {
+        "line": 54,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "### Output Schema"
+      },
+      {
+        "line": 73,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "### Escalation Rules"
+      },
+      {
+        "line": 74,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "- consistency_score < 0.5 \u2192 RECYCLE Stage 2"
+      },
+      {
+        "line": 75,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "- unknowns count > 5 \u2192 add operators within complexity budget"
+      },
+      {
+        "line": 76,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "- Mode A: Builder + Destroyer only (2 roles)"
+      },
+      {
+        "line": 77,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "- Mode B: all six roles"
+      },
+      {
+        "line": 81,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "## RATIONALE"
+      },
+      {
+        "line": 87,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "## RESEARCH"
+      },
+      {
+        "line": 90,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "- No crew definition \u2192 6-role rule-based crew"
+      },
+      {
+        "line": 91,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "- No inversion procedure \u2192 staged inversion protocol"
+      },
+      {
+        "line": 92,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "- No consistency check \u2192 Verifier role + consistency score"
+      },
+      {
+        "line": 93,
+        "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+        "text": "- No hidden-assumption detection \u2192 Unknown Hunter role"
+      }
+    ],
+    "upstream_capability": null,
+    "verification_basis": "deterministic structural checks, not independent domain validation"
+  },
+  "sha": "00b75303eb3083aa38f41a59e3eb166049c3da66ddb47273c5ddb0d74018711e",
+  "status": "CANDIDATE",
+  "author": "builder",
+  "created": "2026-10-19T00:11:31.733535+00:00"
+}

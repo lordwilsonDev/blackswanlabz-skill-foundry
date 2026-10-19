@@ -1,0 +1,10 @@
+groups:
+  - name: foundry
+    rules:
+      - alert: FoundryUnavailable
+        expr: up{job="foundry"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: Foundry operator service is unavailable

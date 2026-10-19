@@ -1,0 +1,6 @@
+[tool.pytest.ini_options]
+testpaths = ["tests", "primitives", "registry"]
+pythonpath = ["."]
+
+[tool.ruff.lint.isort]
+known-first-party = ["composer", "registry", "primitives", "skills", "scripts", "foundry"]

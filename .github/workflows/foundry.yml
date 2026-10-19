@@ -1,0 +1,25 @@
+name: Foundry validation
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pytest==8.4.2
+      - run: python -m pytest -q
+      - run: python scripts/foundry_check.py --root runtime
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pytest==8.4.2
+      - run: docker build -f deploy/Dockerfile.worker -t foundry-worker .
+      - run: echo "FOUNDRY_WORKER_IMAGE=$(docker inspect --format='{{.Id}}' foundry-worker)" >> "$GITHUB_ENV"
+      - run: python -m pytest -q
+      - run: python scripts/foundry_check.py --root runtime

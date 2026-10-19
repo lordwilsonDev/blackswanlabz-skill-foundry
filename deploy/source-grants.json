@@ -1,0 +1,14 @@
+{
+  "ail": {
+    "kind": "github",
+    "repo": "lordwilsonDev/ail-moie-white-papers",
+    "commit": "03722d4dce78609d93ce313d7f210d21f2d86dd5",
+    "path": "papers/ail-operational-execution/README.md"
+  },
+  "moie": {
+    "kind": "github",
+    "repo": "lordwilsonDev/ail-moie-white-papers",
+    "commit": "03722d4dce78609d93ce313d7f210d21f2d86dd5",
+    "path": "papers/inversion-challenge/README.md"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "runs": 30,
+  "source_count": 2,
+  "p50_ms": 36.732479522470385,
+  "p95_ms": 43.84937498252839,
+  "max_ms": 45.49625003710389,
+  "scope": "serial local workbook executions; not a production load test"
+}

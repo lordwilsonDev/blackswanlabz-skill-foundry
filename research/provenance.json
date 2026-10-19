@@ -1,0 +1,54 @@
+{
+  "author": "Lord Wilson / BlackSwanLabz",
+  "base_composer_commit": "1dde233208c722b6fcc710789f4420668e946fbd",
+  "records": [
+    {
+      "file": "foundry/vendor/spine.py",
+      "origin": "https://github.com/lordwilsonDev/msb-v3",
+      "revision": "62453af3a0481e3bdba8073790a272f2e21a1fc3",
+      "original_sha256": "abd7536680b52693dd5cbaee93c48950fae48609ed1c347ba867677545ef7edc",
+      "bundled_sha256": "48fd3e373e7a8672b313ccff7420962f55f3bb6700509c8383af0b16308806ef",
+      "modification": "explicit database path and import cleanup"
+    },
+    {
+      "file": "foundry/vendor/qe/qe.py",
+      "origin": "local:qe-irf-harness",
+      "revision": "8f54e051c90069533ad74164e945c4dcbf6e64d0",
+      "original_sha256": "026769e36fc835a487141be57e0b2c15c0ab72cbb789c3244d46ed8875df9512",
+      "bundled_sha256": "026769e36fc835a487141be57e0b2c15c0ab72cbb789c3244d46ed8875df9512",
+      "modification": "import cleanup only"
+    },
+    {
+      "file": "foundry/vendor/qe/status.py",
+      "origin": "local:qe-irf-harness",
+      "revision": "8f54e051c90069533ad74164e945c4dcbf6e64d0",
+      "original_sha256": "9048f4a7cf1f9acf12fb0f4b97e7dee29b2ce808d62a7b99516b02feee25dec6",
+      "bundled_sha256": "9048f4a7cf1f9acf12fb0f4b97e7dee29b2ce808d62a7b99516b02feee25dec6",
+      "modification": "import cleanup only"
+    },
+    {
+      "file": "research/ail.md",
+      "origin": "https://github.com/lordwilsonDev/ail-moie-white-papers",
+      "revision": "03722d4dce78609d93ce313d7f210d21f2d86dd5",
+      "original_sha256": "68e9bb5682b18deb5aa08034899e9a087c93dae043f203aaffae44e0d0b645ad",
+      "bundled_sha256": "68e9bb5682b18deb5aa08034899e9a087c93dae043f203aaffae44e0d0b645ad",
+      "modification": "none"
+    },
+    {
+      "file": "research/moie.md",
+      "origin": "https://github.com/lordwilsonDev/ail-moie-white-papers",
+      "revision": "03722d4dce78609d93ce313d7f210d21f2d86dd5",
+      "original_sha256": "03dc74a169dcbae756bbda74144de6ee0cf952090c8d3075dbfde9b03d18a2f6",
+      "bundled_sha256": "03dc74a169dcbae756bbda74144de6ee0cf952090c8d3075dbfde9b03d18a2f6",
+      "modification": "none"
+    },
+    {
+      "file": "research/extraction.md",
+      "origin": "local:vault/Skill-Extraction-Blueprint.md",
+      "revision": "snapshot-2026-10-18",
+      "original_sha256": "f5b07dde868c7440ce53ce913c2b640f83bf000c3891545239a3b52dd619e32d",
+      "bundled_sha256": "f5b07dde868c7440ce53ce913c2b640f83bf000c3891545239a3b52dd619e32d",
+      "modification": "none"
+    }
+  ]
+}

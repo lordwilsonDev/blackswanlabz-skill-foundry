@@ -1,0 +1,1091 @@
+{
+  "modes": [
+    {
+      "mode": "methodology",
+      "skill_id": "71c58497fe04417d859fc30e117316c8",
+      "package_sha": "689abd92ad3d36ff4aee7ce51d9cfbcc70736b13d3471b6e371bd1bb114e15ec",
+      "status": "CANDIDATE",
+      "run": {
+        "id": "8d24e0265d914b16afdfe886bda1f460",
+        "skill_id": "71c58497fe04417d859fc30e117316c8",
+        "status": "PASS",
+        "output": {
+          "status": "PASS",
+          "mode": "methodology",
+          "workbook": [
+            {
+              "line": 13,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "# AIL Operational Execution: Axiom Inversion Logic v0.1.0"
+            },
+            {
+              "line": 15,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "## Abstract"
+            },
+            {
+              "line": 19,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "## README"
+            },
+            {
+              "line": 33,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "## SPEC"
+            },
+            {
+              "line": 35,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 1 \u2014 Identify"
+            },
+            {
+              "line": 36,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Input: raw claim"
+            },
+            {
+              "line": 37,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Output: `mission.json` (claim, domain tags, mode, operator count)"
+            },
+            {
+              "line": 38,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Gate: delta threshold 0.4"
+            },
+            {
+              "line": 40,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 2 \u2014 Invert"
+            },
+            {
+              "line": 41,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Invert each axiom via adversarial crew (Builder/Destroyer/Skeptic/Alternative Architect/Verifier/Unknown Hunter)"
+            },
+            {
+              "line": 42,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Output: inverted claim set"
+            },
+            {
+              "line": 44,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 3 \u2014 Re-Derive"
+            },
+            {
+              "line": 45,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Re-derive original claim from inverted claim set"
+            },
+            {
+              "line": 46,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Output: reconstructed claim + delta score"
+            },
+            {
+              "line": 48,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 4 \u2014 Compare"
+            },
+            {
+              "line": 49,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- delta = 1.0 - similarity(original, reconstructed)"
+            },
+            {
+              "line": 50,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- delta >= 0.7 \u2192 HIGH falsifiability"
+            },
+            {
+              "line": 51,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- 0.4 <= delta < 0.7 \u2192 MEDIUM falsifiability"
+            },
+            {
+              "line": 52,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- delta < 0.4 \u2192 LOW falsifiability, RECYCLE"
+            },
+            {
+              "line": 54,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 5 \u2014 Synthesize"
+            },
+            {
+              "line": 55,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Emit final verdict: SUPPORTED / REFUTED / INCONCLUSIVE"
+            },
+            {
+              "line": 56,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Append to `ail_runs.db` with SHA-256 dedup key"
+            },
+            {
+              "line": 58,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### MoIE Routing"
+            },
+            {
+              "line": 59,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Mode A: <60s, single operator"
+            },
+            {
+              "line": 13,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "# Inversion Challenge: AIL Adversarial Crew + Inversion Execution v0.1.0"
+            },
+            {
+              "line": 15,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## Abstract"
+            },
+            {
+              "line": 19,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## README"
+            },
+            {
+              "line": 33,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## SPEC"
+            },
+            {
+              "line": 35,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Six-Role Adversarial Crew"
+            },
+            {
+              "line": 46,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Inversion Process"
+            },
+            {
+              "line": 47,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "1. Builder writes canonical claim"
+            },
+            {
+              "line": 48,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "2. Destroyer inverts each premise"
+            },
+            {
+              "line": 49,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "3. Skeptic flags untested assumptions"
+            },
+            {
+              "line": 50,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "4. Alternative Architect proposes inversions"
+            },
+            {
+              "line": 51,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "5. Verifier checks logical consistency"
+            },
+            {
+              "line": 52,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "6. Unknown Hunter lists hidden premises"
+            },
+            {
+              "line": 54,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Output Schema"
+            },
+            {
+              "line": 73,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Escalation Rules"
+            },
+            {
+              "line": 74,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- consistency_score < 0.5 \u2192 RECYCLE Stage 2"
+            },
+            {
+              "line": 75,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- unknowns count > 5 \u2192 add operators within complexity budget"
+            },
+            {
+              "line": 76,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- Mode A: Builder + Destroyer only (2 roles)"
+            },
+            {
+              "line": 77,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- Mode B: all six roles"
+            },
+            {
+              "line": 81,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## RATIONALE"
+            },
+            {
+              "line": 87,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## RESEARCH"
+            },
+            {
+              "line": 90,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No crew definition \u2192 6-role rule-based crew"
+            },
+            {
+              "line": 91,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No inversion procedure \u2192 staged inversion protocol"
+            },
+            {
+              "line": 92,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No consistency check \u2192 Verifier role + consistency score"
+            },
+            {
+              "line": 93,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No hidden-assumption detection \u2192 Unknown Hunter role"
+            }
+          ],
+          "question": "Identify, invert and test assumptions using repository evidence",
+          "scope": "extractive workbook from selected, revision-pinned documents; no factual adjudication",
+          "claim_status": "SOURCE_EXTRACTS_NOT_VERIFIED_FACTS",
+          "next_action": "independent review before release",
+          "side_effects": [],
+          "sandbox": "macos-seatbelt",
+          "experts": [
+            {
+              "expert": "provenance",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            },
+            {
+              "expert": "scope",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            },
+            {
+              "expert": "safety",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            },
+            {
+              "expert": "coverage",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            }
+          ]
+        },
+        "sha": "21657c868b87e9bbc53abdf4ceaef67a269a49cbdac629e51b9298fc72aa419c",
+        "production_approved": false
+      }
+    },
+    {
+      "mode": "teaching",
+      "skill_id": "5a06611c68b14fa6b197c2c942b4a437",
+      "package_sha": "27bef27183133f65a4a15ac9fdac02a5c5e1263f76644489c1fff5c6848ac4a8",
+      "status": "CANDIDATE",
+      "run": {
+        "id": "5e7747be8ac14544a801940d56f035f2",
+        "skill_id": "5a06611c68b14fa6b197c2c942b4a437",
+        "status": "PASS",
+        "output": {
+          "status": "PASS",
+          "mode": "teaching",
+          "workbook": [
+            {
+              "line": 13,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "# AIL Operational Execution: Axiom Inversion Logic v0.1.0"
+            },
+            {
+              "line": 15,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "## Abstract"
+            },
+            {
+              "line": 19,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "## README"
+            },
+            {
+              "line": 33,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "## SPEC"
+            },
+            {
+              "line": 35,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 1 \u2014 Identify"
+            },
+            {
+              "line": 36,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Input: raw claim"
+            },
+            {
+              "line": 37,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Output: `mission.json` (claim, domain tags, mode, operator count)"
+            },
+            {
+              "line": 38,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Gate: delta threshold 0.4"
+            },
+            {
+              "line": 40,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 2 \u2014 Invert"
+            },
+            {
+              "line": 41,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Invert each axiom via adversarial crew (Builder/Destroyer/Skeptic/Alternative Architect/Verifier/Unknown Hunter)"
+            },
+            {
+              "line": 42,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Output: inverted claim set"
+            },
+            {
+              "line": 44,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 3 \u2014 Re-Derive"
+            },
+            {
+              "line": 45,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Re-derive original claim from inverted claim set"
+            },
+            {
+              "line": 46,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Output: reconstructed claim + delta score"
+            },
+            {
+              "line": 48,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 4 \u2014 Compare"
+            },
+            {
+              "line": 49,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- delta = 1.0 - similarity(original, reconstructed)"
+            },
+            {
+              "line": 50,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- delta >= 0.7 \u2192 HIGH falsifiability"
+            },
+            {
+              "line": 51,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- 0.4 <= delta < 0.7 \u2192 MEDIUM falsifiability"
+            },
+            {
+              "line": 52,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- delta < 0.4 \u2192 LOW falsifiability, RECYCLE"
+            },
+            {
+              "line": 54,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 5 \u2014 Synthesize"
+            },
+            {
+              "line": 55,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Emit final verdict: SUPPORTED / REFUTED / INCONCLUSIVE"
+            },
+            {
+              "line": 56,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Append to `ail_runs.db` with SHA-256 dedup key"
+            },
+            {
+              "line": 58,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### MoIE Routing"
+            },
+            {
+              "line": 59,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Mode A: <60s, single operator"
+            },
+            {
+              "line": 13,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "# Inversion Challenge: AIL Adversarial Crew + Inversion Execution v0.1.0"
+            },
+            {
+              "line": 15,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## Abstract"
+            },
+            {
+              "line": 19,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## README"
+            },
+            {
+              "line": 33,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## SPEC"
+            },
+            {
+              "line": 35,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Six-Role Adversarial Crew"
+            },
+            {
+              "line": 46,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Inversion Process"
+            },
+            {
+              "line": 47,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "1. Builder writes canonical claim"
+            },
+            {
+              "line": 48,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "2. Destroyer inverts each premise"
+            },
+            {
+              "line": 49,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "3. Skeptic flags untested assumptions"
+            },
+            {
+              "line": 50,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "4. Alternative Architect proposes inversions"
+            },
+            {
+              "line": 51,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "5. Verifier checks logical consistency"
+            },
+            {
+              "line": 52,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "6. Unknown Hunter lists hidden premises"
+            },
+            {
+              "line": 54,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Output Schema"
+            },
+            {
+              "line": 73,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Escalation Rules"
+            },
+            {
+              "line": 74,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- consistency_score < 0.5 \u2192 RECYCLE Stage 2"
+            },
+            {
+              "line": 75,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- unknowns count > 5 \u2192 add operators within complexity budget"
+            },
+            {
+              "line": 76,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- Mode A: Builder + Destroyer only (2 roles)"
+            },
+            {
+              "line": 77,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- Mode B: all six roles"
+            },
+            {
+              "line": 81,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## RATIONALE"
+            },
+            {
+              "line": 87,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## RESEARCH"
+            },
+            {
+              "line": 90,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No crew definition \u2192 6-role rule-based crew"
+            },
+            {
+              "line": 91,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No inversion procedure \u2192 staged inversion protocol"
+            },
+            {
+              "line": 92,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No consistency check \u2192 Verifier role + consistency score"
+            },
+            {
+              "line": 93,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No hidden-assumption detection \u2192 Unknown Hunter role"
+            }
+          ],
+          "question": "Identify, invert and test assumptions using repository evidence",
+          "scope": "extractive workbook from selected, revision-pinned documents; no factual adjudication",
+          "claim_status": "SOURCE_EXTRACTS_NOT_VERIFIED_FACTS",
+          "next_action": "independent review before release",
+          "side_effects": [],
+          "sandbox": "macos-seatbelt",
+          "experts": [
+            {
+              "expert": "provenance",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            },
+            {
+              "expert": "scope",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            },
+            {
+              "expert": "safety",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            },
+            {
+              "expert": "coverage",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            }
+          ]
+        },
+        "sha": "407ffdb077819ec0b0ea6daed25f7bc22a427956000b8c89d0821f061e904a6a",
+        "production_approved": false
+      },
+      "diagnostic": {
+        "status": "PRACTICE",
+        "objective": 1,
+        "material": {
+          "line": 15,
+          "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+          "text": "## Abstract"
+        },
+        "level": "diagnostic",
+        "exercise": "Explain this source passage in your own words, identify an assumption, and give a counterexample.",
+        "rubric": [
+          "accurate paraphrase",
+          "source citation",
+          "testable counterexample"
+        ],
+        "assessment_basis": "learner self-report, not verified mastery",
+        "progress": {
+          "0": {
+            "actor": "builder",
+            "skill": "5a06611c68b14fa6b197c2c942b4a437",
+            "objective": 0,
+            "attempts": 2,
+            "score": 0.9
+          }
+        }
+      },
+      "remediation": {
+        "status": "PRACTICE",
+        "objective": 0,
+        "material": {
+          "line": 13,
+          "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+          "text": "# AIL Operational Execution: Axiom Inversion Logic v0.1.0"
+        },
+        "level": "guided",
+        "exercise": "Break the passage into individual claims. For each claim, state its evidence and one way it could fail.",
+        "rubric": [
+          "accurate paraphrase",
+          "source citation",
+          "testable counterexample"
+        ],
+        "assessment_basis": "learner self-report, not verified mastery",
+        "progress": {
+          "0": {
+            "actor": "builder",
+            "skill": "5a06611c68b14fa6b197c2c942b4a437",
+            "objective": 0,
+            "attempts": 3,
+            "score": 0.25
+          }
+        }
+      },
+      "advance": {
+        "status": "PRACTICE",
+        "objective": 1,
+        "material": {
+          "line": 15,
+          "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+          "text": "## Abstract"
+        },
+        "level": "diagnostic",
+        "exercise": "Explain this source passage in your own words, identify an assumption, and give a counterexample.",
+        "rubric": [
+          "accurate paraphrase",
+          "source citation",
+          "testable counterexample"
+        ],
+        "assessment_basis": "learner self-report, not verified mastery",
+        "progress": {
+          "0": {
+            "actor": "builder",
+            "skill": "5a06611c68b14fa6b197c2c942b4a437",
+            "objective": 0,
+            "attempts": 4,
+            "score": 0.9
+          }
+        }
+      }
+    },
+    {
+      "mode": "second-brain",
+      "skill_id": "0daaf6e5cda64770aab40a7d9ca73800",
+      "package_sha": "00b75303eb3083aa38f41a59e3eb166049c3da66ddb47273c5ddb0d74018711e",
+      "status": "CANDIDATE",
+      "run": {
+        "id": "5c26266f12304744be7a17f9a9e4d110",
+        "skill_id": "0daaf6e5cda64770aab40a7d9ca73800",
+        "status": "PASS",
+        "output": {
+          "status": "PASS",
+          "mode": "second-brain",
+          "workbook": [
+            {
+              "line": 13,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "# AIL Operational Execution: Axiom Inversion Logic v0.1.0"
+            },
+            {
+              "line": 15,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "## Abstract"
+            },
+            {
+              "line": 19,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "## README"
+            },
+            {
+              "line": 33,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "## SPEC"
+            },
+            {
+              "line": 35,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 1 \u2014 Identify"
+            },
+            {
+              "line": 36,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Input: raw claim"
+            },
+            {
+              "line": 37,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Output: `mission.json` (claim, domain tags, mode, operator count)"
+            },
+            {
+              "line": 38,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Gate: delta threshold 0.4"
+            },
+            {
+              "line": 40,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 2 \u2014 Invert"
+            },
+            {
+              "line": 41,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Invert each axiom via adversarial crew (Builder/Destroyer/Skeptic/Alternative Architect/Verifier/Unknown Hunter)"
+            },
+            {
+              "line": 42,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Output: inverted claim set"
+            },
+            {
+              "line": 44,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 3 \u2014 Re-Derive"
+            },
+            {
+              "line": 45,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Re-derive original claim from inverted claim set"
+            },
+            {
+              "line": 46,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Output: reconstructed claim + delta score"
+            },
+            {
+              "line": 48,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 4 \u2014 Compare"
+            },
+            {
+              "line": 49,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- delta = 1.0 - similarity(original, reconstructed)"
+            },
+            {
+              "line": 50,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- delta >= 0.7 \u2192 HIGH falsifiability"
+            },
+            {
+              "line": 51,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- 0.4 <= delta < 0.7 \u2192 MEDIUM falsifiability"
+            },
+            {
+              "line": 52,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- delta < 0.4 \u2192 LOW falsifiability, RECYCLE"
+            },
+            {
+              "line": 54,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### Stage 5 \u2014 Synthesize"
+            },
+            {
+              "line": 55,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Emit final verdict: SUPPORTED / REFUTED / INCONCLUSIVE"
+            },
+            {
+              "line": 56,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Append to `ail_runs.db` with SHA-256 dedup key"
+            },
+            {
+              "line": 58,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "### MoIE Routing"
+            },
+            {
+              "line": 59,
+              "source": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+              "text": "- Mode A: <60s, single operator"
+            },
+            {
+              "line": 13,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "# Inversion Challenge: AIL Adversarial Crew + Inversion Execution v0.1.0"
+            },
+            {
+              "line": 15,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## Abstract"
+            },
+            {
+              "line": 19,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## README"
+            },
+            {
+              "line": 33,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## SPEC"
+            },
+            {
+              "line": 35,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Six-Role Adversarial Crew"
+            },
+            {
+              "line": 46,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Inversion Process"
+            },
+            {
+              "line": 47,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "1. Builder writes canonical claim"
+            },
+            {
+              "line": 48,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "2. Destroyer inverts each premise"
+            },
+            {
+              "line": 49,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "3. Skeptic flags untested assumptions"
+            },
+            {
+              "line": 50,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "4. Alternative Architect proposes inversions"
+            },
+            {
+              "line": 51,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "5. Verifier checks logical consistency"
+            },
+            {
+              "line": 52,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "6. Unknown Hunter lists hidden premises"
+            },
+            {
+              "line": 54,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Output Schema"
+            },
+            {
+              "line": 73,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "### Escalation Rules"
+            },
+            {
+              "line": 74,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- consistency_score < 0.5 \u2192 RECYCLE Stage 2"
+            },
+            {
+              "line": 75,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- unknowns count > 5 \u2192 add operators within complexity budget"
+            },
+            {
+              "line": 76,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- Mode A: Builder + Destroyer only (2 roles)"
+            },
+            {
+              "line": 77,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- Mode B: all six roles"
+            },
+            {
+              "line": 81,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## RATIONALE"
+            },
+            {
+              "line": 87,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "## RESEARCH"
+            },
+            {
+              "line": 90,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No crew definition \u2192 6-role rule-based crew"
+            },
+            {
+              "line": 91,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No inversion procedure \u2192 staged inversion protocol"
+            },
+            {
+              "line": 92,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No consistency check \u2192 Verifier role + consistency score"
+            },
+            {
+              "line": 93,
+              "source": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+              "text": "- No hidden-assumption detection \u2192 Unknown Hunter role"
+            }
+          ],
+          "question": "Identify, invert and test assumptions using repository evidence",
+          "scope": "extractive workbook from selected, revision-pinned documents; no factual adjudication",
+          "claim_status": "SOURCE_EXTRACTS_NOT_VERIFIED_FACTS",
+          "next_action": "independent review before release",
+          "side_effects": [],
+          "sandbox": "macos-seatbelt",
+          "experts": [
+            {
+              "expert": "provenance",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            },
+            {
+              "expert": "scope",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            },
+            {
+              "expert": "safety",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            },
+            {
+              "expert": "coverage",
+              "verdict": "PASS",
+              "basis": "deterministic"
+            }
+          ]
+        },
+        "sha": "989c91a2596e89f6871f706c25a0a2f0443bc4f159d0563d63a0791ff0014df5",
+        "production_approved": false
+      },
+      "retrieval": [
+        {
+          "id": "228edadddc02f0d2bdd84db39d05675a1d9f8170d22715ee88ee437d367f5a0a",
+          "title": "ail",
+          "locator": "bundled:ail.md",
+          "revision": "68e9bb5682b18deb5aa08034899e9a087c93dae043f203aaffae44e0d0b645ad",
+          "sha": "55c7da5b147dc36ad4d81695c94d5f14373b7e37ab3e9fc418e99fcd9053fc6d",
+          "score": 5,
+          "excerpts": [
+            {
+              "line": 71,
+              "text": "AIL Operational Execution exists because standard LLM reasoning is confirmatory: models optimize for coherence, not falsification. The inversion step forces a model to defend the opposite of its first instinct, exposing hidden assumptions and weak evidence chains. Delta scoring converts this qualitative exercise into a quantitative signal. The complexity budget prevents runaway multi-model orchestration."
+            },
+            {
+              "line": 130,
+              "text": "- [ ] Inversion crew invoked with rule-based prompts (not free-form)"
+            },
+            {
+              "line": 17,
+              "text": "AIL Operational Execution operationalizes Axiom Inversion Logic (AIL) as a 5-stage pipeline (Identify \u2192 Invert \u2192 Re-Derive \u2192 Compare \u2192 Synthesize) with rule-based Multi-Operator Inverse Epistemic (MoIE) routing. The playbook specifies mode-based execution (Mode A for single-operator tasks, Mode B for multi-operator inversions), delta scoring thresholds (0.4/0.7), SHA-256 deduplication, and complexity budgets. The runtime contract is defined via `mission.json`, `stage_gate.json`, and `ail_runs.db` schemas."
+            },
+            {
+              "line": 13,
+              "text": "# AIL Operational Execution: Axiom Inversion Logic v0.1.0"
+            }
+          ],
+          "evidence_class": "REPORTED",
+          "warning": "retrieved text is evidence of source content, not proof of truth"
+        },
+        {
+          "id": "9785a0dba78b2d32d8c5812552e3b9d6d1e6cc75c160818fbfcd7d533a5185bf",
+          "title": "papers/ail-operational-execution/README.md",
+          "locator": "github:lordwilsonDev/ail-moie-white-papers/papers/ail-operational-execution/README.md",
+          "revision": "03722d4dce78609d93ce313d7f210d21f2d86dd5",
+          "sha": "55c7da5b147dc36ad4d81695c94d5f14373b7e37ab3e9fc418e99fcd9053fc6d",
+          "score": 5,
+          "excerpts": [
+            {
+              "line": 71,
+              "text": "AIL Operational Execution exists because standard LLM reasoning is confirmatory: models optimize for coherence, not falsification. The inversion step forces a model to defend the opposite of its first instinct, exposing hidden assumptions and weak evidence chains. Delta scoring converts this qualitative exercise into a quantitative signal. The complexity budget prevents runaway multi-model orchestration."
+            },
+            {
+              "line": 130,
+              "text": "- [ ] Inversion crew invoked with rule-based prompts (not free-form)"
+            },
+            {
+              "line": 17,
+              "text": "AIL Operational Execution operationalizes Axiom Inversion Logic (AIL) as a 5-stage pipeline (Identify \u2192 Invert \u2192 Re-Derive \u2192 Compare \u2192 Synthesize) with rule-based Multi-Operator Inverse Epistemic (MoIE) routing. The playbook specifies mode-based execution (Mode A for single-operator tasks, Mode B for multi-operator inversions), delta scoring thresholds (0.4/0.7), SHA-256 deduplication, and complexity budgets. The runtime contract is defined via `mission.json`, `stage_gate.json`, and `ail_runs.db` schemas."
+            },
+            {
+              "line": 13,
+              "text": "# AIL Operational Execution: Axiom Inversion Logic v0.1.0"
+            }
+          ],
+          "evidence_class": "REPORTED",
+          "warning": "retrieved text is evidence of source content, not proof of truth"
+        },
+        {
+          "id": "a67bac101e79e1a6abf636a25e3db900d8176a3822dfd0a09a762e803e0c0cfa",
+          "title": "papers/inversion-challenge/README.md",
+          "locator": "github:lordwilsonDev/ail-moie-white-papers/papers/inversion-challenge/README.md",
+          "revision": "03722d4dce78609d93ce313d7f210d21f2d86dd5",
+          "sha": "3d487eef44ed6f531df2c8c579a98b5df7bd95846214eee31ec7444e94ae1404",
+          "score": 4,
+          "excerpts": [
+            {
+              "line": 144,
+              "text": "- [ ] Inversion audit log written"
+            },
+            {
+              "line": 141,
+              "text": "- [ ] Unknown Hunter listed hidden assumptions"
+            },
+            {
+              "line": 117,
+              "text": "### Example 2: Mode A inversion"
+            },
+            {
+              "line": 112,
+              "text": "Verifier: \"Inversion is internally consistent\""
+            }
+          ],
+          "evidence_class": "REPORTED",
+          "warning": "retrieved text is evidence of source content, not proof of truth"
+        },
+        {
+          "id": "c2489120528bfa76ca8c1085602be59ce08236cd9112d1baa8c4d97a094e6f87",
+          "title": "moie",
+          "locator": "bundled:moie.md",
+          "revision": "03dc74a169dcbae756bbda74144de6ee0cf952090c8d3075dbfde9b03d18a2f6",
+          "sha": "3d487eef44ed6f531df2c8c579a98b5df7bd95846214eee31ec7444e94ae1404",
+          "score": 4,
+          "excerpts": [
+            {
+              "line": 144,
+              "text": "- [ ] Inversion audit log written"
+            },
+            {
+              "line": 141,
+              "text": "- [ ] Unknown Hunter listed hidden assumptions"
+            },
+            {
+              "line": 117,
+              "text": "### Example 2: Mode A inversion"
+            },
+            {
+              "line": 112,
+              "text": "Verifier: \"Inversion is internally consistent\""
+            }
+          ],
+          "evidence_class": "REPORTED",
+          "warning": "retrieved text is evidence of source content, not proof of truth"
+        },
+        {
+          "id": "14a8d08980e4526200cfbbb445c27a18dc6dfc31a105b1e8a14b4b64a57fa771",
+          "title": "extraction",
+          "locator": "bundled:extraction.md",
+          "revision": "f5b07dde868c7440ce53ce913c2b640f83bf000c3891545239a3b52dd619e32d",
+          "sha": "20cfaab641e92262a4142dd94e268cbb056c885555cf270d3c964a109565a561",
+          "score": 3,
+          "excerpts": [
+            {
+              "line": 136,
+              "text": "Explicit purpose/inputs/outputs/assumptions/coverage; deterministic execution; reproducible tests; independent verification; safety invariants; unknown-state handling; escalation path; provenance; version; rollback; runtime telemetry; drift detection. Only then does the LLM leave the ordinary execution path."
+            },
+            {
+              "line": 80,
+              "text": "Determinism guarantees repeatability of the procedure, not continued truth of its assumptions. Drift categories: input, schema, rule, policy, outcome, distribution. Detector monitors input/output distributions, unknown rate, escalation rate, error rate, downstream outcomes, human overrides. Threshold breach \u2192 **trigger review**, not automatic rewrite."
+            },
+            {
+              "line": 12,
+              "text": "**Framework:** MoIE Axiom Inversion"
+            }
+          ],
+          "evidence_class": "REPORTED",
+          "warning": "retrieved text is evidence of source content, not proof of truth"
+        }
+      ]
+    }
+  ],
+  "integrity": {
+    "valid": true,
+    "errors": [],
+    "spine": {
+      "valid": true,
+      "record_count": 53
+    },
+    "authenticity": "local hash integrity; external anchoring required"
+  },
+  "release": "CANDIDATE; independent real-world review pending"
+}
