@@ -1,0 +1,39 @@
+# BlackSwanLabz Skill Foundry
+
+> A working preview, for one operator on one machine, that turns a question and authorized sources into a reusable, cited skill: research becomes a revision-pinned workbook with source citations, restricted execution, verification records and a reviewer's release decision. Free to use. It is not production-ready and not an enterprise system; the README says so at the top, and so do the pages below. Author: Lord Wilson / BlackSwanLabz.
+
+Before judging anything, read the status notice at the top of the README. Treat anything a page marks as a proposal, a design, or a candidate as exactly that.
+
+Read in this order.
+
+## Start here
+- [README](README.md): what it is, its honest status, how to run it locally (the server address in it is a loopback address that only works on the machine running the server), the workflow, the three modes.
+- [AI-native frame](FRAME.md): the idea the code implements: Question → authorized sources → method proposal → bounded skill → execution or teaching → verification → receipt → versioned reuse. Written so another model can build from it.
+
+## The three modes (exported skills, each marked CANDIDATE, not approved)
+- [Methodology skill](exports/methodology/SKILL.md): a source-grounded workbook that extracts methods with exact line citations.
+- [Teaching skill](exports/teaching/SKILL.md): a source-grounded workbook for teaching, with per-learner practice.
+- [Second-brain skill](exports/second-brain/SKILL.md): a source-grounded workbook that retrieves only active source revisions with excerpts and line citations.
+- Each export also has a `package.json` next to its SKILL.md (hash, citations, coverage).
+
+## Existing skills it composes
+- [Capability Composer](docs/CAPABILITY-COMPOSER.md): the composition layer: if a capability exists, compose it; if not, create only the missing primitive. Describes four existing domain skills.
+- [GoHighLevel and HubSpot router](skills/ghl_hubspot_router/SKILL.md)
+- [GoHighLevel lead qualifier](skills/gohighlevel_lead_qualifier/SKILL.md)
+- [HubSpot deal pipeline](skills/hubspot_deal_pipeline/SKILL.md)
+- [Slack triage](skills/slack_triage/SKILL.md)
+
+## Safety, operations and provenance
+- [Security boundaries](docs/SECURITY.md): the supported deployment is a trusted local operator, one organization, loopback service; not a multi-tenant security model.
+- [Operations](docs/OPERATIONS.md): running and checking the local service.
+- [Reuse decisions](docs/REUSE.md): what was reused from earlier BlackSwanLabz work and why.
+- [Provenance manifest](research/provenance.json): hash-pinned record of the reused research and components.
+
+## Research it builds on
+- [Axiom Inversion Logic (AIL)](research/ail.md): the AIL operational execution paper, v0.1.0, as reused here.
+- [Mixture of Inversion Experts (MoIE)](research/moie.md): the inversion challenge paper, v0.1.0, as reused here.
+- [Skill extraction design](research/extraction.md): a design (status: proposed, not built).
+
+## Licenses
+- [LICENSE](LICENSE): text and documentation.
+- [LICENSE-CODE](LICENSE-CODE): code.
