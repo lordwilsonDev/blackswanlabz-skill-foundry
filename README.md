@@ -20,7 +20,7 @@ python3 -m foundry --root runtime seed
 python3 -m foundry.server --root runtime --config runtime/operator.json --port 8787
 ```
 
-Open http://127.0.0.1:8787. Initialization saves credentials in `runtime/operator.credentials.json`, mode 0600. Use the builder token to import, select evidence, assemble, run and learn. Assign the reviewer token to a different person for review/release. Two tokens controlled by one person do not establish independent review. Credentials are never committed or included in exports.
+Open http://127.0.0.1:8787 (a local address: it only works on the machine running the server). Initialization saves credentials in `runtime/operator.credentials.json`, mode 0600. Use the builder token to import, select evidence, assemble, run and learn. Assign the reviewer token to a different person for review/release. Two tokens controlled by one person do not establish independent review. Credentials are never committed or included in exports.
 
 On this build machine initialization and seeding have already happened. Do not rerun `init` against the same configuration. Restart with the server command above.
 
